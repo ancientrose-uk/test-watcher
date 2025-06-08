@@ -1,0 +1,32 @@
+{
+  "name": "@ancientrose/test-watcher",
+  "version": "0.0.1",
+  "description": "A file watcher that runs tests.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "test-watcher": "bin/run.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ancientrose-uk/test-watcher.git"
+  },
+  "keywords": [
+    "test",
+    "watcher",
+    "tdd"
+  ],
+  "author": "Natalie Carey <natalie@ancientrose.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ancientrose-uk/test-watcher/issues"
+  },
+  "homepage": "https://github.com/ancientrose-uk/test-watcher#readme",
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "commander": "^14.0.0"
+  }
+}

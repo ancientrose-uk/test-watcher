@@ -149,7 +149,7 @@ async function runConditionalTests() {
   logTimingsTable(timings);
   console.log('')
   highlightedLog(
-    `All tests and type-checking passed in ${
+    `All tests passed in ${
       Math.round((Date.now() - fullStartTime) / 10) / 100
     } seconds`,
     true,

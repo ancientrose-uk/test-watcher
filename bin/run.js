@@ -122,7 +122,7 @@ function highlightedLog(message, testsPassed) {
 
 async function runConditionalTests() {
   const timings = {}
-  const fullStartTime = Date.now();
+  const fullRunTime = Date.now();
   if (runInProgress) {
     runInProgress.kill("SIGTERM");
   }
@@ -149,9 +149,7 @@ async function runConditionalTests() {
   logTimingsTable(timings);
   console.log('')
   highlightedLog(
-    `All tests passed in ${
-      Math.round((Date.now() - fullStartTime) / 10) / 100
-    } seconds`,
+    `All tests passed in ${displayTime(fullRunTime)}`,
     true,
   );
 }
@@ -185,9 +183,9 @@ process.stdin.on("data", (data) => {
 
 function displayTime(ms) {
   if (ms < 1000) {
-    return `${ms} ms`;
+    return `${ms}ms`;
   }
-  return `${Math.round(ms / 10) / 100} seconds`;
+  return `${Math.round(ms / 10) / 100}s`;
 }
 
 function getSeparator(start, middle, end, maxKeyLength, maxValueLength) {
